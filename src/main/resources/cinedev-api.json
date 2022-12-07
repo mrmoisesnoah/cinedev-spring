@@ -1,0 +1,179 @@
+{
+	"info": {
+		"_postman_id": "441acb75-c93b-4254-b0c4-2729bbc6cc38",
+		"name": "cinedev-api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23920929"
+	},
+	"item": [
+		{
+			"name": "Filme",
+			"item": [
+				{
+					"name": "ListarFilmes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/filme",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"filme"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ListarFilmesById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/filme",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"filme"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CadastrarFilme",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n        \r\n        \"nome\": \"Turning Red\",\r\n        \"idioma\": \"DUBLADO\",\r\n        \"classificacaoEtaria\": 10,\r\n        \"duracao\": 105\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/filme",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"filme"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "EditarFilme",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\r\n    \"nome\": \"Doutor Estranho no Multiverso da Loucura\",\r\n    \"idioma\": \"LEGENDADO\",\r\n    \"classificacaoEtaria\": 18,\r\n    \"duracao\": 150\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/filme/19",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"filme",
+								"19"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "removerFilme",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/filme/21",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"filme",
+								"21"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Cliente",
+			"item": [
+				{
+					"name": "Listar todos os Clientes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/cliente",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"cliente"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cadastrar novo Cliente",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"primeiroNome\": \"Jorge\",\n    \"ultimoNome\": \"Farias\",\n    \"cpf\": \"46051339175\",\n    \"dataNascimento\": \"1973-07-05\",\n    \"email\": \"jorge-farias94@progetamos.com.br\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/cliente",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"cliente"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "localhost:8080"
+		}
+	]
+}

@@ -1,0 +1,75 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Ingresso comprado</title>
+    <style>
+        body {
+            padding: 35px;
+            width: 560px;
+        }
+
+        header {
+            background-color: #FC8802;
+            height: 100px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        main {
+            padding: 15px 0;
+        }
+
+        .container {
+            margin: 0 15px;
+        }
+
+        h1 {
+            font-size: 24px;
+        }
+
+        h2 {
+            margin: 10px 0;
+        }
+
+        .sessao {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        footer {
+            border: solid 1px;
+        }
+
+
+    </style>
+</head>
+
+<body>
+<header>
+    <h1>Sua compra foi concluída!</h1>
+    <h2>Mostre esse ingresso na entrada da sessão</h2>
+</header>
+<main>
+    <div class="container">
+        <h2>${nomeFilme}</h2>
+        <h3>Sessão</h3>
+        <div class="sessao">
+            <p>${dataHora}</p>
+            <p>${idioma}</p>
+        </div>
+        <div>
+            <p>A diversão já está garantida! Compre seu balde pipoca e seu refrigente por que sua sessão já vai
+                começar.</p>
+        </div>
+    </div>
+</main>
+<footer>
+    <div class="container">
+        <p>Qualquer dúvida entre em contato com o suporte pelo email: <a href="#">${email}</a>.</p>
+    </div>
+</footer>
+</body>
+</html>
